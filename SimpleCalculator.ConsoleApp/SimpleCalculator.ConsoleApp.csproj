@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{227D19C3-79D6-4DAF-B74D-D56EFC9DB380}</ProjectGuid>
+    <ProjectGuid>{8B5C2F18-9752-41B1-9263-1CC52557CA1F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lab1Programs</RootNamespace>
-    <AssemblyName>Lab1Programs</AssemblyName>
+    <RootNamespace>SimpleCalculator.ConsoleApp</RootNamespace>
+    <AssemblyName>SimpleCalculator.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Lab1Programs.Q12</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,40 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Q10.cs" />
-    <Compile Include="Q11.cs" />
-    <Compile Include="Q12.cs" />
-    <Compile Include="Q13.cs" />
-    <Compile Include="Q14.cs" />
-    <Compile Include="Q15.cs" />
-    <Compile Include="Q16.cs" />
-    <Compile Include="Q17.cs" />
-    <Compile Include="Q18.cs" />
-    <Compile Include="Q19.cs" />
-    <Compile Include="Q20.cs" />
-    <Compile Include="Q21.cs" />
-    <Compile Include="Q22.cs" />
-    <Compile Include="Q23.cs" />
-    <Compile Include="Q24.cs" />
-    <Compile Include="Q25.cs" />
-    <Compile Include="Q26.cs" />
-    <Compile Include="Q27.cs" />
-    <Compile Include="Q28.cs" />
-    <Compile Include="Q29.cs" />
-    <Compile Include="Q30.cs" />
-    <Compile Include="Q7.cs" />
-    <Compile Include="Q1.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Q2.cs" />
-    <Compile Include="Q3.cs" />
-    <Compile Include="Q4.cs" />
-    <Compile Include="Q5.cs" />
-    <Compile Include="Q6.cs" />
-    <Compile Include="Q8.cs" />
-    <Compile Include="Q9.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleCalculator.BusinessLayer\SimpleCalculator.BusinessLayer.csproj">
+      <Project>{b5bd6d5f-8583-4e41-ace6-42e69652bbfe}</Project>
+      <Name>SimpleCalculator.BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
