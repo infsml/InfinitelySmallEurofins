@@ -36,7 +36,9 @@ namespace Lab1Programs
             tax_payable = tax_payable - annual_tax_save_investments;
             if(tax_payable < 0)tax_payable= 0;
             int net_salary = gross_annual - tax_payable;
+            Console.WriteLine($"Gross salary = {gross_annual}");
             Console.WriteLine($"Net salary = {net_salary}");
+            Console.WriteLine($"Tax Payable = {tax_payable}");
         }
     }
 }

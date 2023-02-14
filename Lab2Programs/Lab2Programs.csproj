@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{203D25E3-21E2-4329-9F23-DED48FD8778F}</ProjectGuid>
+    <ProjectGuid>{A6BC1330-7348-40E1-B3E5-D21551B68C37}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DawnOfCode</RootNamespace>
-    <AssemblyName>DawnOfCode</AssemblyName>
+    <RootNamespace>Lab2Programs</RootNamespace>
+    <AssemblyName>Lab2Programs</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>DawnOfCode.MergeSorter</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MergeSorter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

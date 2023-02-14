@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{203D25E3-21E2-4329-9F23-DED48FD8778F}</ProjectGuid>
+    <ProjectGuid>{0C45C07F-454F-4422-A73E-F8305E62CCAA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DawnOfCode</RootNamespace>
-    <AssemblyName>DawnOfCode</AssemblyName>
+    <RootNamespace>OOCode2</RootNamespace>
+    <AssemblyName>OOCode2</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DawnOfCode.MergeSorter</StartupObject>
+    <StartupObject>OOCode2.Program2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,12 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MergeSorter.cs" />
+    <Compile Include="BigProgram.cs" />
+    <Compile Include="Program2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

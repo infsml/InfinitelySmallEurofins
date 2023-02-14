@@ -33,7 +33,7 @@ namespace Lab1Programs
             }
             else
             {
-                if(total<1000 && (c == 'R' || c == 'r'){
+                if(total<1000 && (c == 'R' || c == 'r')){
                     total = total * 1025 / 1000;
                 }
             }
