@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2Programs", "Lab2Program
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOCode2", "OOCode2\OOCode2.csproj", "{0C45C07F-454F-4422-A73E-F8305E62CCAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOCode3", "OOCode3\OOCode3.csproj", "{947C2DE5-C5C9-4845-AFE8-8659B39ABFA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOAssesment", "OOAssesment\OOAssesment.csproj", "{1FA4DD27-5A3A-4865-8BF2-8CC0368CA3DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{0C45C07F-454F-4422-A73E-F8305E62CCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C45C07F-454F-4422-A73E-F8305E62CCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C45C07F-454F-4422-A73E-F8305E62CCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947C2DE5-C5C9-4845-AFE8-8659B39ABFA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947C2DE5-C5C9-4845-AFE8-8659B39ABFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947C2DE5-C5C9-4845-AFE8-8659B39ABFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947C2DE5-C5C9-4845-AFE8-8659B39ABFA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA4DD27-5A3A-4865-8BF2-8CC0368CA3DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA4DD27-5A3A-4865-8BF2-8CC0368CA3DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA4DD27-5A3A-4865-8BF2-8CC0368CA3DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA4DD27-5A3A-4865-8BF2-8CC0368CA3DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

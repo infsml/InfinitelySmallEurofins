@@ -10,7 +10,22 @@ namespace OOCode2Big
     {
         public static void Main()
         {
+            Company company = new Company() { Name = "Micro" };
+            Employee employee = new Employee() { Name = "N1", EmpID = 1, Basic = 10, Experience = 1 };
+            company.Employees.Add(employee);
+            employee = new Employee() { Name = "N2", EmpID = 2, Basic = 50, Experience = 3 };
+            company.Employees.Add(employee);
+            employee = new Employee() { Name = "N3", EmpID = 3, Basic = 60, Experience = 5 };
+            company.Employees.Add(employee);
+            employee = new Employee() { Name = "N4", EmpID = 4, Basic = 70, Experience = 7 };
+            company.Employees.Add(employee);
 
+            Console.WriteLine(company.Name);
+            Console.WriteLine(company.GetTotalCustomers());
+            Console.WriteLine(company.GetTotalEmployees());
+            Console.WriteLine(company.GetTotalSalaryPayout());
+
+            Console.WriteLine(company.GetEmployee(3).Name);
         }
     }
     class Company

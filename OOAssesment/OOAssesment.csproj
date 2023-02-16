@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C45C07F-454F-4422-A73E-F8305E62CCAA}</ProjectGuid>
+    <ProjectGuid>{1FA4DD27-5A3A-4865-8BF2-8CC0368CA3DA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OOCode2</RootNamespace>
-    <AssemblyName>OOCode2</AssemblyName>
+    <RootNamespace>OOAssesment</RootNamespace>
+    <AssemblyName>OOAssesment</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>OOCode2Big.BigProgram</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,15 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BigProgram.cs" />
-    <Compile Include="Program2.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Q1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Q3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
