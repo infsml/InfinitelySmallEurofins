@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DelegateEventLambda.LambdaStuf</StartupObject>
+    <StartupObject>DelegateEventLambda.LambdaStuff2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DelegateStuff.cs" />
     <Compile Include="LambdaStuf.cs" />
+    <Compile Include="LambdaStuff2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

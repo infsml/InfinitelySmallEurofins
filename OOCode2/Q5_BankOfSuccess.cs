@@ -19,7 +19,7 @@ namespace OOCode2_Q5
         public int Balance { get; set; }
         public int IntrestRate { get; set; }
         public int MonthsHeld { get; set; }
-        public IInterseCalculator InterseCalculator { get; set; }
+        public IIntrestCalculator IntrestCalculator { get; set; }
         public Customer customer { get; set; }
         public bool Deposit(double amount)
         {
@@ -27,7 +27,7 @@ namespace OOCode2_Q5
         }
         public double CalculateIntrest()
         {
-            return InterseCalculator.CalculateIntrest(this);
+            return IntrestCalculator.CalculateIntrest(this);
         }
     }
     class Bank
@@ -52,39 +52,39 @@ namespace OOCode2_Q5
     class Individual : Customer { }
     class Company : Customer { }
 
-    interface IInterseCalculator
+    interface IIntrestCalculator
     {
         double CalculateIntrest(Account account);
 
     }
-    class LoanIndividualIntrestCalculator : IInterseCalculator
+    class LoanIndividualIntrestCalculator : IIntrestCalculator
     {
         public double CalculateIntrest(Account account) {
             return 0;
         }
     }
-    class LoanCompanyIntrestCalculator : IInterseCalculator
+    class LoanCompanyIntrestCalculator : IIntrestCalculator
     {
         public double CalculateIntrest(Account account)
         {
             return 0;
         }
     }
-    class MortageIndividualIntrestCalculator : IInterseCalculator
+    class MortageIndividualIntrestCalculator : IIntrestCalculator
     {
         public double CalculateIntrest(Account account)
         {
             return 0;
         }
     }
-    class MortageCompanyIntrestCalculator : IInterseCalculator
+    class MortageCompanyIntrestCalculator : IIntrestCalculator
     {
         public double CalculateIntrest(Account account)
         {
             return 0;
         }
     }
-    class SavingsIntrestCalculator : IInterseCalculator
+    class SavingsIntrestCalculator : IIntrestCalculator
     {
         public double CalculateIntrest(Account account)
         {

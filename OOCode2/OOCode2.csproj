@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>OOCode2Big.BigProgram</StartupObject>
+    <StartupObject>OOCode2_Q4_MembershipApp.Q4_MembershipApp</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BigProgram.cs" />
+    <Compile Include="PointOfSale.cs" />
     <Compile Include="Program2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Q3.cs" />
+    <Compile Include="Q4_MembershipApp.cs" />
     <Compile Include="Q5_BankOfSuccess.cs" />
   </ItemGroup>
   <ItemGroup>
