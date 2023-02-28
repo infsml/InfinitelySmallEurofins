@@ -97,6 +97,7 @@ namespace AIRecommendationEngine.DataLoader
                     ratingObject.Book = myBook;
                     myBook.UserRating.Add(ratingObject);
                 }
+                bookDetails.UserRating.Add(ratingObject);
                 //bookDetails.Users[rating[0]].UserRating.Add(ratingObject);
                 //bookDetails.Books[rating[1]].UserRating.Add(ratingObject);
             }//);
