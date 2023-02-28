@@ -19,7 +19,7 @@ namespace FileLabs
             info.CreateSubdirectory("nothing2");
             info.CreateSubdirectory("nothing3");
             Console.WriteLine("Subdirectory created");
-            //info.
+            
         }
     }
 }

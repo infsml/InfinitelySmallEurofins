@@ -8,6 +8,6 @@ namespace AIRecommendationEngine.CoreRecommender
 {
     public interface IRecommender
     {
-        double GetCorrelation(List<int> baseData, List<int> targetData);
+        double GetCorrelation(List<int> baseData, List<int> otherData);
     }
 }
