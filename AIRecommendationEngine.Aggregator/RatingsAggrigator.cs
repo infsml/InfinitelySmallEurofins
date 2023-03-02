@@ -30,7 +30,8 @@ namespace AIRecommendationEngine.Aggregator
                 var user = users[i];
                 foreach (BookUserRating rating in user.UserRating)
                 {
-                    if (!res.ContainsKey(rating.ISBN)) res[rating.ISBN] = new List<int>(Enumerable.Repeat(0,users.Count));
+                    if (!res.ContainsKey(rating.ISBN))
+                        res[rating.ISBN] = new List<int>(Enumerable.Repeat(0,users.Count));
                     int mRating = rating.Rating;
                     if(mRating<0)mRating = 0;
                     if(mRating>10)mRating = 10;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,6 @@ namespace AIRecommendationEngine.Common.Entities
         public string State {get; set;}
         public string Country { get; set; }
 
-        public List<BookUserRating> UserRating { get; set; } = new List<BookUserRating>();
+        public ConcurrentQueue<BookUserRating> UserRating { get; set; } = new ConcurrentQueue<BookUserRating>();
     }
 }

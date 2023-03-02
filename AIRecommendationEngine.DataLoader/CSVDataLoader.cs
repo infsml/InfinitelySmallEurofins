@@ -1,5 +1,6 @@
 ﻿using AIRecommendationEngine.Common.Entities;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,24 +25,28 @@ namespace AIRecommendationEngine.DataLoader
             //E T L
             //Extract
             //Transfer
-            List<List<string>> users = loadCSVLines(dataDirectory + userFile,delimiter:';',containsHeader:true);
-            List<List<string>> books = loadCSVLines(dataDirectory + bookFile,delimiter:';',containsHeader:true);
-            List<List<string>> ratings = loadCSVLines(dataDirectory + ratingFile,delimiter:';',containsHeader:true);
+            List<List<string>> users=null;
+            List<List<string>> books=null;
+            List<List<string>> ratings=null;
 
-            
+            Parallel.Invoke(
+                ()=>{users = loadCSVLines(dataDirectory + userFile, delimiter: ';', containsHeader: true);},
+                ()=>{books = loadCSVLines(dataDirectory + bookFile, delimiter: ';', containsHeader: true);},
+                ()=> { ratings = loadCSVLines(dataDirectory + ratingFile, delimiter: ';', containsHeader: true); }
+                );
 
             //Load
-            foreach (var user in users)
-            //Parallel.ForEach<List<string>>(users, user =>
+            //foreach (var user in users)
+            Parallel.ForEach<List<string>>(users, user =>
             {
                 string userID = "";
                 string[] userLocation = new string[1];
                 int c = user.Count;
-                int age=0;
-                if (c >= 3)age = ParseInt(user[2]);
-                if (c >= 2)userLocation = user[1].Split(',');
-                if(c >= 1)userID = user[0];
-                
+                int age = 0;
+                if (c >= 3) age = ParseInt(user[2]);
+                if (c >= 2) userLocation = user[1].Split(',');
+                if (c >= 1) userID = user[0];
+
                 string[] userLocationAugment = new string[3] { "", "", "" };
                 for (int i = 0; i < userLocation.Length && i < 3; i++)
                 {
@@ -56,10 +61,10 @@ namespace AIRecommendationEngine.DataLoader
                     Country = userLocationAugment[2],
                 };
                 bookDetails.Users[userID] = userObject;
-            }
+            });
 
-            foreach(var book in books)
-            //Parallel.ForEach<List<string>>(books, book =>
+            //foreach(var book in books)
+            Parallel.ForEach<List<string>>(books, book =>
             {
                 bookDetails.Books[book[0]] = new Book()
                 {
@@ -72,10 +77,10 @@ namespace AIRecommendationEngine.DataLoader
                     ImageUrlMedium = book[6],
                     ImageUrlLarge = book[7]
                 };
-            }//);
+            });
 
-            foreach (var rating in ratings)
-            //Parallel.ForEach<List<string>>(ratings, rating =>
+            //foreach (var rating in ratings)
+            Parallel.ForEach<List<string>>(ratings, rating =>
             {
                 User myUser = null;
                 Book myBook = null;
@@ -89,18 +94,18 @@ namespace AIRecommendationEngine.DataLoader
                 {
                     myUser = bookDetails.Users[rating[0]];
                     ratingObject.User = myUser;
-                    myUser.UserRating.Add(ratingObject);
+                    myUser.UserRating.Enqueue(ratingObject);
                 }
                 if (bookDetails.Books.ContainsKey(rating[1]))
                 {
                     myBook = bookDetails.Books[rating[1]];
                     ratingObject.Book = myBook;
-                    myBook.UserRating.Add(ratingObject);
+                    myBook.UserRating.Enqueue(ratingObject);
                 }
-                bookDetails.UserRating.Add(ratingObject);
+                bookDetails.UserRating.Enqueue(ratingObject);
                 //bookDetails.Users[rating[0]].UserRating.Add(ratingObject);
                 //bookDetails.Books[rating[1]].UserRating.Add(ratingObject);
-            }//);
+            });
             return bookDetails;
         }
 

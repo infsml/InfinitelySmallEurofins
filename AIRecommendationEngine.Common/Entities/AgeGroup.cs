@@ -12,7 +12,7 @@ namespace AIRecommendationEngine.Common.Entities
         public int GetGroup(int age)
         {
             int grp = 0;
-            while (age > bounds[grp] && grp<bounds.Length) grp++;
+            while (grp < bounds.Length && age > bounds[grp]) grp++;
             return grp;
         }
     }

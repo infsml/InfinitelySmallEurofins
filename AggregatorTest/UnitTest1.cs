@@ -55,8 +55,8 @@ namespace AggregatorTest
                 User = user1,
                 ISBN = book.ISBN
             };
-            user1.UserRating.Add(rating);
-            book.UserRating.Add(rating);
+            user1.UserRating.Enqueue(rating);
+            book.UserRating.Enqueue(rating);
             BookUserRating rating1 = new BookUserRating()
             {
                 UserID = user2.UserID,
@@ -65,8 +65,8 @@ namespace AggregatorTest
                 Book = book,
                 ISBN=book.ISBN
             };
-            user2.UserRating.Add(rating1);
-            book.UserRating.Add(rating1);
+            user2.UserRating.Enqueue(rating1);
+            book.UserRating.Enqueue(rating1);
             BookUserRating rating2 = new BookUserRating()
             {
                 UserID = user.UserID,
@@ -75,8 +75,8 @@ namespace AggregatorTest
                 User = user,
                 ISBN = book1.ISBN
             };
-            user.UserRating.Add(rating2);
-            book1.UserRating.Add(rating2);
+            user.UserRating.Enqueue(rating2);
+            book1.UserRating.Enqueue(rating2);
 
             BookUserRating rating3 = new BookUserRating()
             {
@@ -86,8 +86,8 @@ namespace AggregatorTest
                 User = user,
                 ISBN = book.ISBN
             };
-            user.UserRating.Add(rating3);
-            book.UserRating.Add(rating3);
+            user.UserRating.Enqueue(rating3);
+            book.UserRating.Enqueue(rating3);
             
             BookUserRating rating4 = new BookUserRating()
             {
@@ -97,8 +97,8 @@ namespace AggregatorTest
                 User = user,
                 ISBN = book2.ISBN
             };
-            user.UserRating.Add(rating4);
-            book2.UserRating.Add(rating4);
+            user.UserRating.Enqueue(rating4);
+            book2.UserRating.Enqueue(rating4);
 
             details.Users[user.UserID] = user;
             details.Users[user1.UserID] = user1;
@@ -108,11 +108,11 @@ namespace AggregatorTest
             details.Books[book1.ISBN] = book1;
             details.Books[book2.ISBN] = book2;
 
-            details.UserRating.Add(rating);
-            details.UserRating.Add(rating1);
-            details.UserRating.Add(rating2);
-            details.UserRating.Add(rating3);
-            details.UserRating.Add(rating4);
+            details.UserRating.Enqueue(rating);
+            details.UserRating.Enqueue(rating1);
+            details.UserRating.Enqueue(rating2);
+            details.UserRating.Enqueue(rating3);
+            details.UserRating.Enqueue(rating4);
         }
         [TestCleanup]
         public void Cleanup()

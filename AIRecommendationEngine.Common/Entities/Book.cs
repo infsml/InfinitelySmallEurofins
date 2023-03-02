@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,6 @@ namespace AIRecommendationEngine.Common.Entities
         public string ImageUrlMedium {get; set;}
         public string ImageUrlLarge { get; set; }
 
-        public List<BookUserRating> UserRating { get; set; } = new List<BookUserRating>();
+        public ConcurrentQueue<BookUserRating> UserRating { get; set; } = new ConcurrentQueue<BookUserRating>();
     }
 }

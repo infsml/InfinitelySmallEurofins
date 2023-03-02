@@ -68,5 +68,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AIRecommendationEngine.Common\AIRecommendationEngine.Common.csproj">
+      <Project>{098945CF-266C-4E11-A0B7-7C9FD8862FF4}</Project>
+      <Name>AIRecommendationEngine.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AIRecommendationEngine.DataLoader\AIRecommendationEngine.DataLoader.csproj">
+      <Project>{564879CC-2CB3-4655-A6A3-D5CB9DE376C2}</Project>
+      <Name>AIRecommendationEngine.DataLoader</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
