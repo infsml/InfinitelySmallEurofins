@@ -43,8 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AttackStrategy.cs" />
+    <Compile Include="Ball.cs" />
+    <Compile Include="Decorator.cs" />
+    <Compile Include="Defender.cs" />
+    <Compile Include="DefendStrategy.cs" />
+    <Compile Include="FieldPlayer.cs" />
+    <Compile Include="FootBall.cs" />
+    <Compile Include="FootballStadiumBuilder.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameEngine.cs" />
+    <Compile Include="GoalKeeper.cs" />
+    <Compile Include="MidFielder.cs" />
+    <Compile Include="Observer.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayGround.cs" />
+    <Compile Include="PlayGroundBuilder.cs" />
+    <Compile Include="PlayGroundDirector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referee.cs" />
+    <Compile Include="Striker.cs" />
+    <Compile Include="Team.cs" />
+    <Compile Include="TeamStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
