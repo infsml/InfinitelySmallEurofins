@@ -18,5 +18,24 @@ namespace EntityFrameWorkStuff
 
         // configure tables
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Person> People { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Customer>().Map(c =>
+            {
+                c.MapInheritedProperties();
+                c.ToTable("Customers");
+            });
+            modelBuilder.Entity<Supplier>().Map(c =>
+            {
+                c.MapInheritedProperties();
+                c.ToTable("Suppliers");
+            });
+
+            //modelBuilder.Entity<Customer>().MapToStoredProcedures();
+            modelBuilder.Types().Configure(t => t.MapToStoredProcedures());
+        }
     }
+    
 }

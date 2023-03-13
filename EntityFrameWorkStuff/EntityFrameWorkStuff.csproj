@@ -54,6 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Migrations\202303080511248_InitialCreate.cs" />
+    <Compile Include="Migrations\202303080511248_InitialCreate.designer.cs">
+      <DependentUpon>202303080511248_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303080854525_OwnerMigration.cs" />
+    <Compile Include="Migrations\202303080854525_OwnerMigration.designer.cs">
+      <DependentUpon>202303080854525_OwnerMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductsDbContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +70,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202303080511248_InitialCreate.resx">
+      <DependentUpon>202303080511248_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303080854525_OwnerMigration.resx">
+      <DependentUpon>202303080854525_OwnerMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

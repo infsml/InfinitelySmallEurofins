@@ -5,30 +5,30 @@ using System.Linq;
 
 namespace ContactsManager.DataAccess.EFDbAccess
 {
-    public partial class ContactsDBContext : DbContext
+    internal partial class ContactsDBContext : DbContext
     {
         public ContactsDBContext()
             : base("name=ContactsDBContext")
         {
         }
 
-        public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<Entities.Contact> Contacts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Contact>()
+            modelBuilder.Entity<Entities.Contact>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Contact>()
+            modelBuilder.Entity<Entities.Contact>()
                 .Property(e => e.Email)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Contact>()
+            modelBuilder.Entity<Entities.Contact>()
                 .Property(e => e.Phone)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Contact>()
+            modelBuilder.Entity<Entities.Contact>()
                 .Property(e => e.Location)
                 .IsUnicode(false);
         }

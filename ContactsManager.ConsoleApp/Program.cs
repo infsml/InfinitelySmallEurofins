@@ -16,7 +16,8 @@ namespace ContactsManager.ConsoleApp
         static void Main(string[] args)
         {
             //IContactsRepository repository= new ContactsFileRepository();
-            IContactsRepository repository = new ContactDatabaseRepository();
+            //IContactsRepository repository = new ContactDatabaseRepository();
+            IContactsRepository repository = new ContactsEFRepository();
             Program program= new Program { repository = repository };
             program.MainMenu();
 
