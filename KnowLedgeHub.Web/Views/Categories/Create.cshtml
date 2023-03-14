@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<h2>@ViewBag.Message</h2>
+<form method="post" class="container">
+    <div class="row">
+        <label for="catName">Category Name</label>
+        <input id="catName" name="name" type="text" />
+    </div>
+    <div class="row">
+        <label for="catDesc">Category Description</label>
+        <textArea cols="60" name="description" rows="6" id="catDesc"></textArea>
+    </div>
+    <input class="row rounded m-1" type="submit" value="Submit"/>
+</form>
