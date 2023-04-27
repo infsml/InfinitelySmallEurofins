@@ -42,10 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleManager.cs" />
     <Compile Include="CatagoriesManager.cs" />
+    <Compile Include="Data\IArticleRepository.cs" />
     <Compile Include="Data\ICategoryRepository.cs" />
+    <Compile Include="Entities\Article.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="ICategoriesManager.cs" />
+    <Compile Include="IArticleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

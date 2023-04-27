@@ -1,0 +1,54 @@
+﻿@model IEnumerable<KnowLedgeHub.Web.Models.BrowseArticleViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h3>@TempData["Message"]</h3>
+<p>
+    @Html.ActionLink("Create New", "SubmitArticle")
+</p>
+
+@Html.Partial("_SearchArticlePartial")
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostedOn)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="@item.URL" target="_blank">@item.Title</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostedOn)
+        </td>
+    </tr>
+}
+
+</table>

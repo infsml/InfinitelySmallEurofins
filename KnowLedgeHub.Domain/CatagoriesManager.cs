@@ -36,5 +36,9 @@ namespace KnowLedgeHub.Domain
         {
             return repo.GetAll();
         }
+        public Category GetById(int id)
+        {
+            return repo.GetById(id);
+        }
     }
 }

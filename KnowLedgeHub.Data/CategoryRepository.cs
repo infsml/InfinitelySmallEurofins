@@ -33,5 +33,9 @@ namespace KnowLedgeHub.Data
             dbContext.categories.Add(category);
             dbContext.SaveChanges();
         }
+        public Category GetById(int id)
+        {
+            return dbContext.categories.Find(id);
+        }
     }
 }

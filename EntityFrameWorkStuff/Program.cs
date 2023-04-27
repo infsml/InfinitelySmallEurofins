@@ -15,7 +15,11 @@ namespace EntityFrameWorkStuff
             //EF Code first approach
 
             ProductsDbContext db = new ProductsDbContext();
-            db.Database.Log = Console.WriteLine;
+
+            foreach(var i in db.Products)Console.WriteLine(i.Category);
+
+
+            /*db.Database.Log = Console.WriteLine;
 
             string sqlUpd = "update products set cost = cost + 100";
             db.Database.ExecuteSqlCommand(sqlUpd);

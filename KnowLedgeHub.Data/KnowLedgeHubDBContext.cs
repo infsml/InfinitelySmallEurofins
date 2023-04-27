@@ -13,5 +13,6 @@ namespace KnowLedgeHub.Data
         public KnowLedgeHubDBContext() : base("name=DefaultConnection") { }
 
         public DbSet<Category> categories { get; set; }
+        public DbSet<Article> articles { get; set; }
     }
 }

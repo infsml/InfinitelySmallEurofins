@@ -13,5 +13,6 @@ namespace KnowLedgeHub.Domain
         List<Category> ListCategories();
         void EditCategory(Category category);
         void DeleteCategory(int catagoryId);
+        Category GetById(int id);
     }
 }

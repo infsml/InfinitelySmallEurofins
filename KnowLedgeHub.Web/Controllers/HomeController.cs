@@ -12,7 +12,7 @@ namespace KnowLedgeHub.Web.Controllers
         {
             return View();
         }
-
+        [OutputCache(Duration = 60,VaryByParam ="*",Location = System.Web.UI.OutputCacheLocation.Client)]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
